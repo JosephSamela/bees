@@ -113,12 +113,6 @@ h2 {
         padding-top: 1em;
         padding-bottom: 3em;
     }
-    .wrapper {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 10px;
-    }
-    
 }
 
 @media screen and (min-width: 900px) {
@@ -134,12 +128,14 @@ h2 {
         margin-bottom: 4em;
         padding-bottom: 2em;
     }
-    .wrapper {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
-    }
-    
+}
+
+.wrapper {
+    width: 100%;
+}
+
+.phototile {
+    width: 180px;
 }
 
 .articleimg {
