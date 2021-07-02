@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Joe's Bees</title>
+
+    <meta charset="UTF-8">
+    <meta name="author" content="Joe Samela">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@0.7.7"></script>
+</head>
+
+<body>
+
+    <div class="content">
+        <div id="banner" class="container">
+            <h1 class="title top-center">Joe's Bees</h1>
+            <img class="banner bottom-left" src="media/trees.png">
+            <img class="banner" src="media/sky.jpg">
+        </div>
+
+        <div class="container section">
+            <h1>
+                <img class="smallbee" src="media/bee1.png"> WATCH THE BEES, LIVE!
+                <img class="smallbee" src="media/bee1.png">
+            </h1>
+        </div>
+
+        <div class="container section">
+            <img class="border" src="media/honeycomb-border.png">
+            <div class="centered video-container">
+                <iframe class="video" src="https://www.youtube.com/embed/57biQY-NQP4?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="container section textarea">
+            <img style="float: right;" class="articleimg" src="media/jarofhoney.png">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+        </div>
+
+        <div class="container section">
+            <h1>
+                <img class="smallbee" src="media/bee1.png"> Honey Production
+                <img class="smallbee" src="media/bee1.png">
+            </h1>
+        </div>
+
+        <div class="container section">
+            <canvas id="chart" width="400"></canvas>
+        </div>
+
+        <div class="container section textarea">
+            <img style="float: right;" class="articleimg" src="media/bee2.png">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+        </div>
+
+        <div class="container footer">
+            <img class="banner centered" src="media/trees.png">
+        </div>
+
+        <script src="chart.js"></script>
+
+</body>
