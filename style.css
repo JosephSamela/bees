@@ -135,7 +135,8 @@ h2 {
 }
 
 .phototile {
-    width: 180px;
+    /* width: 180px; */
+    width: 20%;
 }
 
 .articleimg {
