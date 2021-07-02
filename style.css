@@ -34,12 +34,12 @@ h2 {
     color: darkgray;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 800px) {
     .title {
-        font-size: 143px;
+        font-size: 120px;
     }
     h1 {
-        font-size: 55pt;
+        font-size: 50pt;
     }
 }
 
