@@ -69,7 +69,7 @@ function main(xdata, ydata) {
     );
 }
 
-fetch('http://beehive-wight-data-bridge.samela.io')
+fetch('http://beehive-weight-data-bridge.samela.io')
     .then((response) => {
         return response.json();
     })
