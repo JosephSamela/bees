@@ -69,7 +69,7 @@ function main(xdata, ydata) {
     );
 }
 
-fetch('http://192.168.1.5:5000/data')
+fetch('http://beehive-wight-data-bridge.samela.io')
     .then((response) => {
         return response.json();
     })
