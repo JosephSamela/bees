@@ -58,4 +58,4 @@ if __name__ == "__main__":
     t.daemon = True
     t.start()
     # start flask server
-    app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0', port=8075)
