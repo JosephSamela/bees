@@ -1,68 +1,78 @@
-const labels = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August'
-];
+function main(xdata, ydata) {
 
-const data = {
-    labels: labels,
-    datasets: [{
-        backgroundColor: '#ffd76e',
-        borderColor: '#fbc411',
-        color: "#ffffff",
-        data: [0, 10, 5, 2, 20, 30, 45, 24],
-    }]
-};
-
-const config = {
-    type: 'line',
-    data,
-    options: {
-        legend: {
-            display: false
-        },
-        scales: {
-            yAxes: [{
-                scaleLabel: {
-                    display: true,
-                    labelString: 'Weight (lbs)'
-                }
-            }]
-        },
-        plugins: {
-            zoom: {
-                zoom: {
-                    wheel: {
-                        enabled: true,
-                    },
-                    tooltips: {
-                        enabled: true,
-                    },
-                    pinch: {
-                        enabled: true,
-                    },
-                    mode: 'x',
-                },
-                pan: {
-                    enabled: true,
-                    mode: 'x',
-                }
+    const zoomOptions = {
+        zoom: {
+            wheel: {
+                enabled: true,
             },
-            title: {
-                display: true,
-                position: 'bottom',
-                text: (ctx) => 'Zoom: ' + zoomStatus() + ', Pan: ' + panStatus()
+            pinch: {
+                enabled: true,
+            },
+            mode: 'x',
+        },
+        pan: {
+            enabled: true,
+            mode: 'x',
+        }
+    };
+
+    const data = {
+        labels: xdata,
+        datasets: [{
+            data: ydata,
+            backgroundColor: '#ffd76e',
+            borderColor: '#fbc411',
+            color: "#ffffff",
+            fill: true,
+        }]
+    };
+
+    const config = {
+        type: 'line',
+        data: data,
+        options: {
+            responsive: true,
+            scales: {
+                x: {
+                    type: 'time',
+                    ticks: {
+                        autoSkip: true,
+                        autoSkipPadding: 50,
+                        maxRotation: 0
+                    },
+                },
+                y: {
+                    min: 0,
+                    max: 200,
+                    title: {
+                        display: true,
+                        text: 'Weight (lbs)'
+                    }
+                },
+            },
+            plugins: {
+                zoom: zoomOptions,
+                legend: {
+                    display: false,
+                },
+                title: {
+                    display: false,
+                    text: 'Honey Production'
+                }
             }
         },
-    }
-};
+    };
 
-var myChart = new Chart(
-    document.getElementById('chart').getContext('2d'),
-    config
-);
+    var myChart = new Chart(
+        document.getElementById('chart').getContext('2d'),
+        config
+    );
+}
+
+fetch('http://192.168.1.5:5000/data')
+    .then((response) => {
+        return response.json();
+    })
+    .then((rsp) => {
+        main(rsp.labels, rsp.data);
+    });
