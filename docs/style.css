@@ -150,11 +150,11 @@ h2 {
 }
 
 .footer {
-    padding-top: 8em;
+    margin-top: 8em;
 }
 
 .phototile {
-    width: 23%;
+    width: 30%;
 }
 
 .articleimg {
@@ -176,4 +176,8 @@ p {
 .grid-item {
     font-size: 150%;
     /* margin: 0em 1em; */
+}
+
+a {
+    text-decoration: none;
 }
